@@ -1,6 +1,6 @@
 # LyricsFloat (LF)
 
-Floating synced lyrics + a tiny glass mini-player for whatever is playing on Windows (Spotify app or Spotify Web).
+A tiny hub that lets you manage whatever your playing on spotify without having to go back and fourth to the app/website.
 
 **Build:** double-click `build.bat` → `dist\LyricsFloat.exe` (installs Python 3.12 via winget if missing, then all dependencies).
 **Run from source:** `pip install -r requirements.txt` then `python lyricsfloat.py` (`--demo` previews without Spotify).
@@ -11,8 +11,7 @@ Floating synced lyrics + a tiny glass mini-player for whatever is playing on Win
 - Small audio visualizer (bars / mirror / wave) reacts to system audio (WASAPI loopback); only runs while playing.
 - Optional blurred album-art background; accent colour can follow the cover.
 - Scroll over `♪` to nudge lyric timing ±0.05 s (Shift: ±0.5 s).
-- **Sprite:** a pixel-art buddy (cat, axolotl, ghost, bot, or your own PNG/GIF) sits on the hub. Each has its own personality: the **cat** grooms, puffs up and digs in its claws when yanked, and curls into a loaf to sleep; the **axolotl** is jelly-soft, flares its gills and blows bubbles; the **ghost** turns see-through and leaves a trail when moved, plays peek-a-boo (BOO!) and dozes half-sunk into the hub; the **bot** glitches and throws sparks when shaken, turns its screen into an equalizer while music plays and beeps. All blink, sleep when paused, hop on a new song and react to clicks. Settings → Sprite (or `⋯ → Sprite`).
-- Tray icon: show/hide hub, Settings, Quit.
+- **Sprite:** a couple of premade sprites you can choose from like a cat, ghost, axolotl etc., as well as upload your own (if they have all the needed animations, as the sprites are made to be reactive).
 
 ## Settings (⋯ → Settings…)
 - **Lyrics:** style (Float, Karaoke, Drift, Stack, Minimal), font, weight, size, vertical position, width, opacity, shadow/glow.
@@ -25,5 +24,3 @@ Floating synced lyrics + a tiny glass mini-player for whatever is playing on Win
 Lyrics come from LRCLIB (no key); found lyrics are cached in `%LOCALAPPDATA%\LyricsFloat\cache`.
 Next/previous/seek need Spotify Premium (Windows just forwards the command to Spotify).
 If the visualizer says nothing happens, `PyAudioWPatch` failed to install for your Python version; use Python 3.12.
-
-If lyrics ever misbehave, run `lyricsfloat.exe --debug` and send `%LOCALAPPDATA%\LyricsFloat\debug.log`.
